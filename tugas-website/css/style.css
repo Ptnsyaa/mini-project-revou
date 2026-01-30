@@ -1,0 +1,318 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+/* Perbaikan Navigasi */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    background-color: #FFD700; /* Warna kuning */
+    position: sticky; /* Tambahkan kata 'position' */
+    top: 0;
+    z-index: 1000;
+}
+
+/* Membuat Logo Kecil dan Bulat */
+.logo img {
+    width: 60px;          /* Lebar logo */
+    height: 60px;         /* Tinggi harus sama agar bulat sempurna */
+    border-radius: 50%;   /* Membuat jadi bulat */
+    object-ofit: cover;   /* Agar gambar tidak penyet/gepeng */
+    border: 2px solid #fff;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: 0.3s;
+    border: 1px solid #ccc;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Header */
+header {
+    padding: 40px 10%;
+    background-color: #fff;
+}
+
+.hero-content {
+    margin-bottom: 20px;
+}
+
+/* Mengatur Header & Text */
+header {
+    text-align: left; /* Sesuai mockup, teks biasanya di kiri atau tengah */
+    padding: 20px 10%;
+}
+
+/* KOTAK BANNER (Membatasi ukuran agar tidak raksasa) */
+.banner-box {
+    width: 100%;
+    max-width: 1100px; /* Batas lebar agar tidak terlalu lebar di layar besar */
+    height: 350px;     /* Kunci tinggi banner sesuai mockup */
+    margin: 0 auto;    /* Tengahkan kotak */
+    overflow: hidden;
+    border-radius: 10px; /* Membuat sudut tumpul yang modern */
+}
+
+.banner-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* JURUS RAHASIA: Gambar tidak gepeng & memenuhi kotak */
+    display: block;
+}
+
+/* PERBAIKAN HEADQUARTERS (Agar Bulat Sempurna & Rapi) */
+.hq-cards {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 40px 0;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Teks otomatis di tengah bawah gambar */
+}
+
+.circle {
+    width: 120px; 
+    height: 120px;
+    border: 3px solid #FFD700; /* Garis kuning sesuai screenshot kamu */
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Message Us Section */
+.message-section {
+    padding: 40px 10%;
+}
+
+.message-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.flex-container {
+    display: flex;
+    gap: 30px;
+}
+
+.form-side,
+.result-side {
+    flex: 1;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input,
+textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Result Box */
+.result-box {
+    border: 1px solid #ccc;
+    padding: 20px;
+    background: #fff;
+    height: 100%;
+    border-radius: 4px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .flex-container {
+        flex-direction: column;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    /* Sembunyikan menu di mobile agar simpel */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #eee;
+    margin-top: 40px;
+}
+
+/* Mengatur ukuran logo agar tetap kecil dan rapi */
+.logo img {
+    height: 50px;
+    /* Atur tinggi sesuai keinginan, misal 50px */
+    width: auto;
+    /* Biar lebarnya menyesuaikan otomatis agar tidak gepeng */
+    display: block;
+}
+
+/* Pastikan nav tetap rapi */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    /* Gunakan background yang diinginkan */
+}
+
+/* Membuat Logo di Navigasi menjadi Bulat */
+.logo img {
+    width: 60px;
+    /* Lebar harus sama dengan tinggi */
+    height: 60px;
+    /* Tinggi harus sama dengan lebar */
+    border-radius: 50%;
+    /* Ini yang membuat jadi bulat */
+    object-fit: cover;
+    /* Agar gambar tidak gepeng saat ditarik jadi bulat */
+    border: 2px solid #ffe054;
+    /* Opsional: memberi garis pinggir */
+}
+
+/* Membuat Foto di bagian Headquarters menjadi Bulat */
+.circle img {
+    width: 100px;
+    /* Sesuaikan dengan ukuran lingkaran kamu */
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Menghapus lingkaran lama yang mungkin cuma garis */
+.circle {
+    width: 100px !important;
+    /* Ukuran kotak harus sama */
+    height: 100px !important;
+    /* Ukuran kotak harus sama */
+    border-radius: 50% !important;
+    overflow: hidden;
+    /* Memotong bagian gambar yang kotak */
+    border: 3px solid #FFD700;
+    /* Memberi bingkai kuning */
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Memaksa GAMBAR di dalam lingkaran jadi bulat */
+.circle img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    /* PENTING: Biar gambar gak penyok */
+    display: block;
+}
+
+/* Mengatur wadah utama setiap kota */
+.card {
+    display: flex;
+    flex-direction: column;
+    /* Menyusun lingkaran dan teks ke bawah */
+    align-items: center;
+    /* Mengetengahkan isi secara horizontal */
+    text-align: center;
+    /* Memastikan teks di dalamnya pas tengah */
+    width: 100px;
+    /* Beri lebar yang konsisten agar jarak antar kota rapi */
+}
+
+/* Mengatur lingkaran gambar */
+.circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #FFD700;
+    /* Warna kuning sesuai screenshot terakhir kamu */
+    overflow: hidden;
+    margin-bottom: 10px;
+    /* Memberi jarak antara gambar dan teks */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Mengatur teks kota */
+.card p {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+    /* Menghapus margin bawaan agar tidak geser */
+}
+
+.hq-cards {
+    display: flex;
+    justify-content: center;
+    /* Mengetengahkan ketiga kartu di halaman */
+    gap: 40px;
+    /* Jarak antar kartu kota */
+    padding: 20px 0;
+}
